@@ -1,0 +1,25 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#176b3a"><title>Perfect Builder Invoice</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css"></head><body>
+<header class="top"><b>PERFECT BUILDER <small>CONTRACTOR LTD</small></b><button class="menu" onclick="toggleSide()">☰</button></header>
+<aside id="side"><button onclick="view('dashboard')">🏠 Dashboard</button><button onclick="newInvoice()">＋ New Invoice</button><button onclick="view('invoices')">🧾 All Invoices</button><button onclick="view('customers')">👤 Customers</button><button onclick="view('settings')">⚙ Settings</button></aside>
+<main>
+<section id="dashboard" class="screen"><h1>Dashboard</h1><div class="stats"><div>Total Invoices<b id="si">0</b></div><div>Total Billed<b id="sb">£0.00</b></div><div>Received<b id="sr">£0.00</b></div><div>Outstanding<b id="so">£0.00</b></div></div><div class="card"><h2>Recent Invoices</h2><div id="recent"></div></div></section>
+<section id="new" class="screen hide"><div class="head"><h1>Invoice</h1><div><button onclick="save()">💾 Save</button><button onclick="printIt()">🖨 Print</button></div></div><div class="card form">
+<div class="g3"><label>Invoice No<input id="no" readonly></label><label>Date<input id="date" type="date"></label><label>Time<input id="time" type="time"></label></div>
+<h3>Customer</h3><div class="g2"><label>Name<input id="customer"></label><label>Phone<input id="phone"></label><label>Email<input id="email"></label><label>Address<input id="address"></label></div>
+<h3>Project Address</h3><input id="project">
+<h3>Work / Items</h3><table><thead><tr><th>Description</th><th>Qty</th><th>Unit £</th><th>Total</th><th></th></tr></thead><tbody id="items"></tbody></table><button onclick="add()">+ Add Item</button>
+<div class="summary"><div>PROJECT TOTAL<b id="total">£0.00</b></div><div>RECEIVED PAYMENT<input id="received" type="number" value="0"></div><div>REMAINING BALANCE<b id="remain">£0.00</b></div></div>
+<h3>Notes & Terms</h3><div class="g2"><label>Additional Notes<textarea id="notes"></textarea></label><label>Payment Terms<textarea id="payment">Payment is due according to the agreed quotation and project payment schedule.</textarea></label><label class="wide">Terms & Conditions<textarea id="terms">Additional or changed work may be treated as a variation and priced separately.</textarea></label><label class="wide">Variations / Extra Work<textarea id="variations"></textarea></label></div></div></section>
+<section id="invoices" class="screen hide"><h1>All Invoices</h1><input class="search" id="isearch" oninput="renderInvoices()" placeholder="Search invoice, customer or project"><div class="card" id="ilist"></div></section>
+<section id="customers" class="screen hide"><h1>Customers</h1><input class="search" id="csearch" oninput="renderCustomers()" placeholder="Search customers"><div class="card" id="clist"></div></section>
+<section id="settings" class="screen hide"><h1>Company Settings</h1><div class="card form"><div class="g2"><label>Company Name<input id="sname"></label><label>Email<input id="semail"></label><label>WhatsApp<input id="swa"></label><label>Telephone<input id="sphone"></label><label>Account Name<input id="sacc"></label><label>Sort Code<input id="ssort"></label><label>Account Number<input id="snum"></label></div><button onclick="settingsSave()">Save Settings</button>
+<hr><h3>☁ Cloud Sync</h3>
+<p>Connect your Supabase database so the same invoices can be used on mobile and laptop.</p>
+<div class="g2">
+<label>Supabase Project URL<input id="cloudUrl" placeholder="https://xxxxx.supabase.co"></label>
+<label>Supabase Anon Key<input id="cloudKey" placeholder="Paste anon/public key"></label>
+</div>
+<button onclick="saveCloud()">Save Cloud Settings</button>
+<button onclick="syncCloud()">☁ Sync Now</button>
+</div></section>
+</main><div id="toast"></div><script src="app.js"></script><script src="cloud-ui.js"></script></body></html>
