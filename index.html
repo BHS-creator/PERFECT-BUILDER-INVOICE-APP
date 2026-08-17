@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BHS Store | Everything You Need</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#">
+      <span class="logo">BHS</span>
+      <span><b>BHS</b><small>STORE</small></span>
+    </a>
+    <div class="search"><input id="searchInput" type="search" placeholder="Search products..."><button>⌕</button></div>
+    <div class="actions">
+      <button class="icon-btn" title="Wishlist">♡</button>
+      <button class="cart-btn" id="cartOpen">🛒 <span>Cart</span><em id="cartCount">0</em></button>
+    </div>
+  </div>
+  <nav class="categories">
+    <div class="container category-nav">
+      <button class="cat active" data-cat="All">All Products</button>
+      <button class="cat" data-cat="Grocery">Grocery</button>
+      <button class="cat" data-cat="Snacks">Snacks</button>
+      <button class="cat" data-cat="Drinks">Drinks</button>
+      <button class="cat" data-cat="Household">Household</button>
+      <button class="cat" data-cat="Personal Care">Personal Care</button>
+      <button class="cat" data-cat="Offers">🔥 Offers</button>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="pill">WELCOME TO BHS STORE</span>
+      <h1>Everything you need.<br><strong>Delivered to you.</strong></h1>
+      <p>Shop groceries, snacks, drinks and everyday essentials at great prices.</p>
+      <button class="primary" id="shopNow">Shop Now <span>→</span></button>
+      <div class="trust"><span>✓ Quality Products</span><span>✓ Easy Ordering</span><span>✓ Cash on Delivery</span></div>
+    </div>
+    <div class="hero-art">
+      <div class="circle"></div>
+      <div class="floating-card card-one">🛒<b>Fresh Deals</b><small>Every Day</small></div>
+      <div class="floating-card card-two">🚚<b>Fast Delivery</b><small>To your doorstep</small></div>
+      <div class="basket">🛍️</div>
+    </div>
+  </div>
+</section>
+
+<section class="container section" id="shop">
+  <div class="section-head"><div><span class="eyebrow">SHOP BY CATEGORY</span><h2>What are you looking for?</h2></div><button class="link-btn" id="viewAll">View all →</button></div>
+  <div class="cat-cards">
+    <button class="category-card" data-cat="Grocery"><span>🥫</span><b>Grocery</b><small>Daily essentials</small></button>
+    <button class="category-card" data-cat="Snacks"><span>🍪</span><b>Snacks</b><small>Tasty treats</small></button>
+    <button class="category-card" data-cat="Drinks"><span>🥤</span><b>Drinks</b><small>Refresh yourself</small></button>
+    <button class="category-card" data-cat="Household"><span>🧹</span><b>Household</b><small>Home essentials</small></button>
+    <button class="category-card" data-cat="Personal Care"><span>🧴</span><b>Personal Care</b><small>Care & hygiene</small></button>
+  </div>
+</section>
+
+<section class="container section products-section">
+  <div class="section-head"><div><span class="eyebrow">POPULAR PRODUCTS</span><h2>Shop our best picks</h2></div><div id="resultCount"></div></div>
+  <div class="products" id="products"></div>
+</section>
+
+<section class="deal">
+  <div class="container deal-inner">
+    <div><span class="eyebrow">SPECIAL OFFER</span><h2>Save more on your everyday shopping.</h2><p>Look out for selected products with special BHS Store prices.</p></div>
+    <button class="primary light" data-cat="Offers">Shop Offers →</button>
+  </div>
+</section>
+
+<section class="container features">
+  <div><span>🚚</span><b>Fast Delivery</b><small>Quick doorstep delivery</small></div>
+  <div><span>💵</span><b>Cash on Delivery</b><small>Pay when you receive</small></div>
+  <div><span>🔒</span><b>Secure Shopping</b><small>Your details stay protected</small></div>
+  <div><span>💬</span><b>Customer Support</b><small>We're here to help</small></div>
+</section>
+</main>
+
+<footer><div class="container footer-grid"><div><div class="brand footer-brand"><span class="logo">BHS</span><span><b>BHS</b><small>STORE</small></span></div><p>Everything You Need, All in One Place.</p></div><div><h4>Quick Links</h4><a href="#shop">Shop</a><a href="#">About Us</a><a href="#">Contact</a></div><div><h4>Customer Care</h4><a href="#">Delivery Information</a><a href="#">Return Policy</a><a href="#">Privacy Policy</a></div></div><div class="copyright">© 2026 BHS Store. All rights reserved.</div></footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="cart-panel" id="cartPanel">
+  <div class="cart-head"><h2>Your Cart</h2><button id="cartClose">×</button></div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-bottom"><div><span>Subtotal</span><strong id="cartTotal">Rs. 0</strong></div><button class="primary checkout" id="checkout">Proceed to Checkout</button></div>
+</aside>
+
+<div class="modal" id="checkoutModal">
+  <div class="modal-box"><button class="modal-close" id="modalClose">×</button><span class="eyebrow">BHS STORE</span><h2>Checkout</h2><p>Enter your details for Cash on Delivery.</p>
+  <form id="orderForm">
+    <input required placeholder="Full Name">
+    <input required type="tel" placeholder="Mobile Number">
+    <input required placeholder="Delivery Address">
+    <input placeholder="City">
+    <button class="primary" type="submit">Place Order • COD</button>
+  </form>
+  <div id="success" class="success">✓ Order placed successfully! We'll contact you shortly.</div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
