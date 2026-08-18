@@ -1,0 +1,58 @@
+*{box-sizing:border-box}
+body{margin:0;background:#ededed;color:#222;font-family:Arial,Helvetica,sans-serif}
+.agreement-page{width:210mm;min-height:297mm;margin:15px auto;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.12);position:relative}
+.agreement-header img{display:block;width:100%;height:auto}
+.agreement-content{padding:12mm 14mm 12mm}
+.agreement-title-row{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid #0b654c;padding-bottom:9px;margin-bottom:12px}
+h1{margin:0;color:#0b654c;font-size:22px;letter-spacing:.7px}
+h2{margin:13px 0 7px;color:#0b654c;font-size:13px}
+h3{margin:7px 0 4px;color:#0b654c;font-size:10.5px}
+.date-field{font-size:9px;color:#555}
+.date-field input{margin-left:5px;padding:5px;border:1px solid #ddd;border-radius:4px;font-size:9px}
+.project-meta{border:1px solid #d8d8d8;border-radius:5px;padding:7px 9px;margin-bottom:10px}
+.meta-row{display:grid;grid-template-columns:31mm 1fr;align-items:center;min-height:19px;border-bottom:1px solid #eee;font-size:9.5px}
+.meta-row:last-child{border-bottom:0}
+.meta-row b{font-size:9px}
+.meta-row input{width:100%;border:0;outline:0;padding:4px 2px;font:9.5px Arial;background:transparent}
+.scope-section{margin:0 0 6px}
+.scope-row{display:grid;grid-template-columns:7mm 1fr;gap:2px;align-items:start;margin:2px 0}
+.scope-row>span{font-size:9.5px;padding-top:5px}
+.scope-input{width:100%;min-height:24px;border:0;outline:0;resize:vertical;font:9.5px/1.35 Arial;padding:3px 2px;background:transparent}
+.summary-table{width:100%;border-collapse:collapse;font-size:9px}
+.summary-table th,.summary-table td{border:1px solid #d7d7d7;padding:7px 8px;text-align:left;vertical-align:top}
+.summary-table th{width:31%;background:#f5f8f7}
+.summary-table input,.summary-table textarea{width:100%;border:0;outline:0;background:transparent;font:9px Arial;resize:vertical}
+.summary-table td>span{font-size:9px}
+.confirmation{font-size:9px;line-height:1.4;margin:5px 0}
+.terms-heading{margin-top:0}
+.terms-list p{font-size:8.7px;line-height:1.38;margin:5px 0}
+.signature-heading{margin-top:15px}
+.signatures{display:grid;grid-template-columns:1fr 1fr;gap:35mm;font-size:9px;margin-top:7px}
+.sig-field{margin-top:8px;border-bottom:1px solid #bbb;min-height:18px}
+.sig-field input{border:0;outline:0;width:75%;font:9px Arial;background:transparent}
+.action-bar{display:flex;gap:7px;margin-top:15px}
+.action-bar button{border:0;background:#0b654c;color:#fff;padding:8px 12px;border-radius:4px;font-size:10px;cursor:pointer}
+.action-bar .secondary{background:#64736d}
+.agreement-footer{display:none}
+.page-break{display:block}
+
+@media print{
+  @page{size:A4;margin:0}
+  body{background:#fff}
+  .agreement-page{width:210mm;min-height:297mm;margin:0;box-shadow:none}
+  .agreement-content{padding-bottom:10mm}
+  .no-print{display:none!important}
+  input,textarea{color:#000}
+  .page-break{break-before:page;page-break-before:always;height:0}
+  /* Keep first-page header only; second page starts directly with Terms. */
+  .agreement-header{display:block}
+  .agreement-footer{display:block;position:absolute;left:0;right:0;bottom:0;height:auto}
+  .agreement-footer img{display:block;width:100%;height:auto}
+  .agreement-page{padding-bottom:0}
+}
+@media(max-width:800px){
+  .agreement-page{width:100%;margin:0}
+  .agreement-content{padding:20px}
+  .agreement-title-row,.signatures{grid-template-columns:1fr;display:block}
+  .date-field{margin-top:8px}
+}
