@@ -308,4 +308,72 @@ input,textarea,select{width:100%;padding:13px;border:1px solid var(--line);borde
   .hero {
     padding-top: 40px !important;
   }
+}/* ===== BHS MOBILE MENU ===== */
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: var(--navy);
+  color: #fff;
+  width: 48px;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: 900;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 850px) {
+
+  .nav {
+    height: 76px;
+    gap: 10px;
+  }
+
+  .logo {
+    height: 52px;
+    max-width: 190px;
+  }
+
+  .navlinks {
+    display: none !important;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 15px 30px rgba(11,31,58,.12);
+    padding: 12px 18px 18px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    z-index: 100;
+  }
+
+  .navlinks.menu-open {
+    display: flex !important;
+  }
+
+  .navlinks a {
+    padding: 14px 12px;
+    border-radius: 9px;
+    font-size: 16px;
+  }
+
+  .navlinks a:hover {
+    background: var(--soft);
+  }
+
+  .header-quote {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: flex !important;
+    flex-shrink: 0;
+  }
 }
