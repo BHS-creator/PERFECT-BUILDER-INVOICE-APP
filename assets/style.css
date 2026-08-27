@@ -377,3 +377,47 @@ input,textarea,select{width:100%;padding:13px;border:1px solid var(--line);borde
     flex-shrink: 0;
   }
 }
+/* INNER PAGES - MOBILE HEADER FIX */
+@media (max-width: 768px) {
+
+  header .header-inner {
+    position: relative !important;
+    min-height: 105px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  header .logo-link {
+    position: relative !important;
+    z-index: 20 !important;
+    display: block !important;
+    flex-shrink: 0 !important;
+  }
+
+  header .logo {
+    position: relative !important;
+    width: 190px !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  header .menu-toggle {
+    position: relative !important;
+    z-index: 30 !important;
+    margin-left: auto !important;
+    flex-shrink: 0 !important;
+  }
+
+  header .header-quote {
+    display: none !important;
+  }
+
+  header .navlinks {
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 100 !important;
+  }
+}
