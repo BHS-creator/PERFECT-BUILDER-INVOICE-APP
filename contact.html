@@ -7,9 +7,33 @@
 <meta property="og:type" content="website"><link rel="stylesheet" href="assets/style.css">
 </head><body><header><div class="container nav">
 <a href="index.html"><img class="logo" src="assets/logo.png" alt="BHS Digital Services logo"></a>
-<nav class="navlinks">
-<a href="index.html">Home</a><a href="services.html">Services</a><a href="packages.html">Packages</a><a href="about.html">About</a><a href="contact.html">Contact</a>
-</nav><a class="btn btn-primary" href="contact.html">Get a Quote</a>
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a href="index.html">
+      <img class="logo" src="assets/logo.png" alt="BHS Digital Services">
+    </a>
+
+    <nav class="navlinks" id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="packages.html">Packages</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <a class="btn btn-primary header-quote" href="contact.html">
+      Get a Quote
+    </a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Open menu"
+      aria-expanded="false">
+      ☰
+    </button>
+
+  </div>
+</header>
 </div></header><main>
 <section><div class="container"><div class="section-head"><span class="kicker">Contact</span><h1>Tell us what you need.</h1><p class="lead">Send your business details and requirements. We’ll review the scope and provide a clear quotation.</p></div>
 <div class="grid-2"><div class="card"><h2>Request a Quote</h2><div id="selectedPackage" class="selected-package" style="display:none">
