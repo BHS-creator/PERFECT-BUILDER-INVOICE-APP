@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact BHS Digital Services</title><meta name="description" content="Contact BHS Digital Services for a website, business documents, design, digital setup, advertising support or monthly business support.">
+<meta name="robots" content="index,follow"><meta name="theme-color" content="#0b1f3a">
+<link rel="canonical" href="https://YOUR-DOMAIN.example/contact.html">
+<meta property="og:title" content="Contact BHS Digital Services"><meta property="og:description" content="Contact BHS Digital Services for a website, business documents, design, digital setup, advertising support or monthly business support.">
+<meta property="og:type" content="website"><link rel="stylesheet" href="assets/style.css">
+</head><body><header><div class="container nav">
+<a href="index.html"><img class="logo" src="assets/logo.png" alt="BHS Digital Services logo"></a>
+<nav class="navlinks">
+<a href="index.html">Home</a><a href="services.html">Services</a><a href="packages.html">Packages</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+</nav><a class="btn btn-primary" href="contact.html">Get a Quote</a>
+</div></header><main>
+<section><div class="container"><div class="section-head"><span class="kicker">Contact</span><h1>Tell us what you need.</h1><p class="lead">Send your business details and requirements. We’ll review the scope and provide a clear quotation.</p></div>
+<div class="grid-2"><div class="card"><h2>Request a Quote</h2><div id="selectedPackage" class="selected-package" style="display:none">
+      <span class="kicker">SELECTED PACKAGE</span>
+      <h3 id="selectedPackageName"></h3>
+      <p id="selectedPackagePrice"></p>
+      <p class="muted">You do not need to select the service again. Just enter your details below.</p>
+    </div>
+    <form action="mailto:YOUR EMAIL" method="post" enctype="text/plain"><input type="hidden" id="selectedPackageField" name="selected_package" value="">
+<input type="hidden" id="selectedPriceField" name="selected_price" value="">
+<div class="form-grid"><input name="name" placeholder="Your name" required><input name="business" placeholder="Business name" required></div>
+<div class="form-grid"><input name="email" type="email" placeholder="Email" required><input name="phone" placeholder="WhatsApp / Phone"></div>
+
+<textarea name="message" placeholder="Tell us what you need..."></textarea><button class="btn btn-primary" type="submit">Send Enquiry</button></form></div>
+<div class="card"><h2>What to send</h2><ul class="check"><li>Business name</li><li>Service you need</li><li>Logo and photos if available</li><li>Existing website/social links</li><li>Deadline</li><li>Approximate budget (optional)</li></ul><div class="notice"><b>WhatsApp:</b> YOUR NUMBER<br><b>Email:</b> YOUR EMAIL</div><p class="muted">Replace the placeholders with your real contact details before publishing.</p></div></div>
+</div></section>
+<section><div class="container"><div class="section-head"><span class="kicker">Mobile experience</span><h2>Your website should look right on every screen.</h2></div>
+<div class="mobile-preview"><div class="screen"><img src="assets/brand-showcase.png" alt="Responsive BHS website preview"><h3>BHS Digital Services</h3><p class="muted">Responsive layout, clear packages and easy contact.</p><a class="btn btn-primary" href="#">Get a Quote</a></div></div></section>
+
+<script>
+(function(){
+ const params=new URLSearchParams(window.location.search);
+ const packageName=params.get('package');
+ const packagePrice=params.get('price');
+ if(!packageName) return;
+
+ const box=document.getElementById('selectedPackage');
+ const nameEl=document.getElementById('selectedPackageName');
+ const priceEl=document.getElementById('selectedPackagePrice');
+ const pkgField=document.getElementById('selectedPackageField');
+ const priceField=document.getElementById('selectedPriceField');
+
+ if(box){box.style.display='block';}
+ if(nameEl){nameEl.textContent=packageName;}
+ if(priceEl){priceEl.textContent=packagePrice || '';}
+ if(pkgField){pkgField.value=packageName;}
+ if(priceField){priceField.value=packagePrice || '';}
+})();
+</script>
+</main><footer><div class="container footer-grid">
+<div><img class="footer-logo" src="assets/logo.png" alt="BHS Digital Services"><p>Professional digital solutions for small businesses.</p></div>
+<div><strong>Contact</strong><p>WhatsApp: YOUR NUMBER<br>Email: YOUR EMAIL<br>Website: bhssomething.uk</p></div>
+</div><div class="container" style="margin-top:22px;font-size:12px">© 2026 BHS Digital Services. All rights reserved.</div></footer></body></html>
